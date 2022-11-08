@@ -1,4 +1,4 @@
-﻿namespace Client.Web.Models
+﻿namespace Client.Web.Services.IServices
 {
     public class ResponseDto
     {

@@ -36,6 +36,12 @@ namespace Client.Web.Services.IServices
                         Encoding.UTF8,"application/json");
                 }
 
+                if(!string.IsNullOrEmpty(apiRequest.AccessToken))
+                {
+                    client.DefaultRequestHeaders.Authorization=
+                        new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", apiRequest.AccessToken);   
+                }
+
                 HttpResponseMessage response = null;
                 switch(apiRequest.ApiType)
                 {
